@@ -8,105 +8,48 @@
   <title>からだコネクト | アプリのご案内・サポート</title>
   <link rel="canonical" href="https://mikirice.github.io/clipmark-support/karada-connect/">
   <link rel="stylesheet" href="assets/style.css">
-  <style>
-    .home .skip-link { position:absolute; top:8px; left:16px; z-index:2; padding:10px 16px; background:var(--paper); transform:translateY(-160%); }
-    .home .skip-link:focus { transform:translateY(0); }
-    .home a:focus-visible { outline:3px solid var(--leaf); outline-offset:5px; }
-    .home .site-header { max-width:1060px; gap:20px; }
-    .home .site-header nav { flex-wrap:wrap; }
-    .home main { max-width:1060px; min-height:0; padding:40px 24px 64px; }
-    .home .intro { padding:clamp(26px,5vw,56px); }
-    .home .intro-grid { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(0,1fr); gap:40px; align-items:center; }
-    .home .eyebrow { margin:0 0 18px; font-size:.78rem; letter-spacing:.08em; }
-    .home h1 { margin:0; font-size:clamp(2rem,4.7vw,3.35rem); line-height:1.4; letter-spacing:-.04em; }
-    .home .lead { margin:22px 0 0; font-size:1rem; }
-    .home .store-link { display:inline-flex; justify-content:center; align-items:center; gap:18px; min-height:52px; margin-top:28px; padding:13px 22px; background:var(--ink); color:var(--paper); border:2px solid var(--ink); border-radius:12px; text-decoration:none; font-weight:700; }
-    .home .store-link:hover { background:var(--leaf); border-color:var(--leaf); }
-    .home .store-link span { font-size:1.2rem; }
-    .home .download-note { margin:9px 0 0; font-size:.8rem; color:#4d5f50; }
-    .home .day-card { padding:28px; border:1px solid var(--line); border-radius:22px; background:var(--paper); }
-    .home .day-card h2 { margin:0; font-size:1.2rem; }
-    .home .day-card p { margin:10px 0 0; font-size:.9rem; }
-    .home .day-label { display:block; margin-bottom:16px; color:var(--leaf); font-size:.78rem; font-weight:700; letter-spacing:.08em; }
-    .home .day-list { list-style:none; margin:20px 0 0; padding:0; display:grid; gap:10px; }
-    .home .day-list li { padding:10px 14px; background:var(--leaf-soft); border-radius:10px; font-size:.92rem; }
-    .home .help-strip { display:flex; justify-content:space-between; gap:24px; align-items:center; margin-top:20px; padding:22px 28px; border:1px solid var(--line); border-radius:18px; background:var(--paper); }
-    .home .help-strip h2 { font-size:1rem; margin:0; }
-    .home .help-strip p { margin:3px 0 0; font-size:.85rem; color:#4d5f50; }
-    .home .help-links { display:flex; flex-wrap:wrap; gap:12px 24px; font-size:.9rem; font-weight:700; }
-    .home .section-heading { font-size:1.45rem; margin:44px 0 18px; }
-    .home .features { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
-    .home .feature { background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:24px; }
-    .home .feature-num { color:var(--leaf); font-size:.78rem; font-weight:700; letter-spacing:.12em; }
-    .home .feature h3 { font-size:1.05rem; margin:10px 0; }
-    .home .feature p { margin:0; font-size:.9rem; }
-    .home .plans { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-    .home .plan { padding:26px; border:1px solid var(--line); border-radius:18px; background:var(--paper); }
-    .home .plan h3 { margin:0 0 14px; font-size:1.1rem; }
-    .home .plan ul { margin:0; padding-left:1.3em; font-size:.9rem; }
-    .home .plan li + li { margin-top:6px; }
-    .home .plan .price { margin:16px 0 0; font-weight:700; font-size:.92rem; }
-    .home .small-note { margin:14px 0 0; color:#4d5f50; font-size:.8rem; }
-    .home .care-note { margin-top:36px; padding:22px 26px; border-left:3px solid var(--leaf); }
-    .home .care-note h2 { font-size:1rem; margin:0 0 8px; }
-    .home .care-note p { margin:6px 0 0; font-size:.85rem; }
-    .home footer { max-width:1060px; margin:auto; color:#4d5f50; }
-    @media (max-width:760px) {
-      .home .intro-grid { grid-template-columns:1fr; gap:28px; }
-      .home .day-card { padding:22px; }
-      .home .day-list { margin-top:16px; }
-      .home .features { grid-template-columns:1fr; }
-      .home .feature { padding:22px; }
-      .home .help-strip { align-items:flex-start; flex-direction:column; gap:14px; }
-    }
-    @media (max-width:520px) {
-      .home .site-header { padding:18px 20px; flex-direction:column; gap:8px; }
-      .home main { padding:24px 16px 40px; }
-      .home h1 { font-size:clamp(1.65rem,7vw,2rem); }
-      .home .day-card h2 { font-size:1.05rem; }
-      .home .plans { grid-template-columns:1fr; }
-      .home .store-link { display:flex; }
-      .home .help-strip { padding:22px; }
-      .home footer { padding:24px 20px; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/landing.css">
+  <meta property="og:title" content="からだコネクト | 今日の遊びが、親子の時間に。">
+  <meta property="og:description" content="3〜12歳の親子に。場所・時間・道具に合わせて、今日できる運動あそびを見つけよう。">
+  <meta property="og:image" content="https://mikirice.github.io/clipmark-support/karada-connect/assets/app-icon.jpg">
 </head>
 <body class="home">
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header">
-    <a class="brand" href="./"><span aria-hidden="true">●</span> からだコネクト</a>
-    <nav aria-label="メインナビゲーション"><a href="support/">サポート</a><a href="privacy/">プライバシー</a></nav>
+    <a class="brand" href="./"><img src="assets/app-icon.jpg" alt="" width="36" height="36"> からだコネクト</a>
+    <nav aria-label="メインナビゲーション"><a href="#experience">アプリについて</a><a href="support/">サポート</a><a href="privacy/">プライバシー</a></nav>
   </header>
   <main id="main">
     <article class="hero intro" aria-labelledby="intro-title">
       <div class="intro-grid">
         <div>
-          <p class="eyebrow">からだコネクト 公式ガイド</p>
-          <h1 id="intro-title">運動あそびを、<br>親子のペースで。</h1>
-          <p class="lead">3〜12歳のお子さんと保護者のためのiPhoneアプリ。年齢や、その日の場所・時間・道具に合わせて、家庭でできる運動あそびと競技ドリルを提案します。</p>
+          <p class="eyebrow">3〜12歳のお子さんと、保護者の方へ</p>
+          <h1 id="intro-title">今日の遊びが、<br><em>親子の時間に。</em></h1>
+          <p class="lead">「今日は、何して遊ぼう？」<br>年齢や場所、使える時間と道具に合わせて。<br>今の親子にちょうどいい運動あそびを、<br class="desktop-break">からだコネクトで見つけませんか。</p>
           <a class="store-link" href="https://apps.apple.com/jp/app/id6806118279">App Storeで見る <span aria-hidden="true">↗</span></a>
           <p class="download-note">無料ダウンロード・アプリ内課金あり<br>iPhone / iOS 17以降 / 日本語</p>
         </div>
-        <aside class="day-card" aria-labelledby="day-title">
-          <span class="day-label">たとえば、こんな日に</span>
-          <h2 id="day-title">今日は、どう遊ぼう？</h2>
-          <p>無理に毎日続けなくても大丈夫。<br>できそうな遊びから、ひとつずつ。</p>
-          <ul class="day-list">
-            <li>雨の日に、おうちの中で</li>
-            <li>道具なしで、まずは3分</li>
-            <li>親子で、一緒に体を動かす</li>
-          </ul>
-        </aside>
+        <div class="hero-visual">
+          <span class="orbit-label">道具なしでも、おうちでも。</span>
+          <div class="phone phone-back"><img src="assets/screen-library.jpg" alt="あそび図鑑。年齢や運動の種類から遊びを探せる画面" width="750" height="1624"></div>
+          <div class="phone phone-front"><img src="assets/screen-today.jpg" alt="きょうの遊び。場所や時間などの条件を選ぶアプリ画面" width="750" height="1624" fetchpriority="high"></div>
+          <span class="visual-caption">実際のアプリ画面</span>
+        </div>
       </div>
     </article>
 
-    <section class="help-strip" aria-labelledby="help-title">
-      <div><h2 id="help-title">ご利用中の方へ</h2><p>使い方や購入の復元、データの取り扱いをご案内します。</p></div>
-      <div class="help-links"><a href="support/">使い方・よくある質問 →</a><a href="privacy/">プライバシー →</a></div>
+    <div class="promise-strip"><span>年齢に合わせて</span><span>身近な場所と道具で</span><span>親子のペースで</span></div>
+    <section id="experience" class="experience" aria-labelledby="experience-title">
+      <div class="section-intro"><p class="eyebrow">LET’S PLAY, TOGETHER</p><h2 id="experience-title">「できそう」が見つかる。<br>「もう一回」が生まれる。</h2><p>上手にできることよりも、一緒に体を動かす時間を。<br>遊び探しから振り返りまで、親子の毎日をそっと支えます。</p></div>
+      <div class="walkthrough">
+        <div class="screen-card"><div class="screen-copy"><span class="step">01 / FIND</span><h3>今日にぴったりの遊びを。</h3><p>場所、時間、人数、道具を選択。<br>今できる遊びから、ひとつ選ぼう。</p></div><img src="assets/screen-today.jpg" alt="きょうの遊びの条件選択画面" width="750" height="1624" loading="lazy"></div>
+        <div class="screen-card"><div class="screen-copy"><span class="step">02 / EXPLORE</span><h3>好きから、世界が広がる。</h3><p>基本の動きから競技のドリルまで。<br>あそび図鑑で、気になる遊びを探そう。</p></div><img src="assets/screen-library.jpg" alt="バランスや移動など、種類別に探せるあそび図鑑" width="750" height="1624" loading="lazy"></div>
+        <div class="screen-card"><div class="screen-copy"><span class="step">03 / PLAY</span><h3>やり方がわかると、楽しい。</h3><p>難しさ、必要な道具、遊び方を確認。<br>準備と安全を確かめたら、遊んでみよう。</p></div><img src="assets/screen-detail.jpg" alt="リアクション・ドリルの難しさや道具を確認する詳細画面" width="750" height="1624" loading="lazy"></div>
+      </div><p class="small-note screen-note">掲載画像はApp Storeで公開中のアプリ画面です。表示内容はバージョンや設定によって異なる場合があります。</p>
     </section>
 
     <section aria-labelledby="features-title">
-      <h2 class="section-heading" id="features-title">その日の「できそう」を見つける</h2>
+      <h2 class="section-heading" id="features-title">小さな遊びを、親子の習慣に。</h2>
       <div class="features">
         <div class="feature"><span class="feature-num" aria-hidden="true">01</span><h3>条件に合わせて選ぶ</h3><p>場所、時間、人数、使える道具を選ぶと、今日に合う遊びを提案。遊びの詳細で準備や安全上の注意を確認できます。</p></div>
         <div class="feature"><span class="feature-num" aria-hidden="true">02</span><h3>親子のペースで続ける</h3><p>12種類の親子4週間コースと、場面別のおうち遊びパックを用意。コースは全12回を、自分たちのペースで進められます。</p></div>
@@ -114,13 +57,18 @@
       </div>
     </section>
 
-    <section aria-labelledby="plans-title">
+    <section class="pricing-section" aria-labelledby="plans-title">
       <h2 class="section-heading" id="plans-title">まずは、無料で試せます</h2>
       <div class="plans">
         <div class="plan"><h3>無料で使えること</h3><ul><li>年齢や条件に合う無料の運動あそび</li><li>各コースの最初の3回を、対象の無料遊びで体験</li><li>40本の声かけメモ、活動の記録と振り返り</li></ul><p class="small-note">条件によっては、対象となる無料の遊びがない場合があります。3回を終えても自動で課金されません。</p></div>
         <div class="plan"><h3>もっと遊びたい方へ</h3><ul><li>有料の運動あそび</li><li>コース4〜12回目の進行・提案</li><li>月額と買い切りで、使える機能は同じ</li></ul><p class="price">月額500円（自動更新）/ 買い切り5,000円</p><p class="small-note">購入は保護者の方が行ってください。年齢・道具などの条件は購入後も適用されます。</p></div>
       </div>
       <p class="small-note">日本のApp Store向けの案内です。購入前に、アプリ内とApp Storeの確認画面で最新の価格・条件をご確認ください。</p>
+    </section>
+
+    <section class="help-strip" aria-labelledby="help-title">
+      <div><h2 id="help-title">ご利用中の方へ</h2><p>使い方や購入の復元、データの取り扱いをご案内します。</p></div>
+      <div class="help-links"><a href="support/">使い方・よくある質問 →</a><a href="privacy/">プライバシー →</a></div>
     </section>
 
     <section class="care-note" aria-labelledby="care-title">
